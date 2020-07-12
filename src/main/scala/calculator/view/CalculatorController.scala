@@ -91,6 +91,8 @@ class CalculatorController(
       def minus (action: ActionEvent)={
         text.text = text.text.value + "-"
       }
-
-
+      
+      def calculate (action: ActionEvent) = {
+        var value = Calculator.calculate(text.text.value)
+        text.text = value
 }
