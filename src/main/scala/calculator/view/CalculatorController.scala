@@ -1,98 +1,97 @@
-package calculator
+package calculator.view
 
-import calculator.MainApp
+// import calculator.MainApp
 import scalafx.Includes._
 import scalafx.application.JFXApp
-import scalafx.event.ActionEvent
+import scalafx.event.{ActionEvent, EventHandler}
 import scalafx.scene.Scene
 import scalafx.scene.control.{Button, TextField}
 import scalafxml.core.macros.sfxml
+import java.awt.event.MouseEvent
 
 @sfxml
 class CalculatorController(
-    var button0 : Button,
-    var button1 : Button,
-    var button2 : Button,
-    var button3 : Button,
-    var button4 : Button,
-    var button5 : Button,
-    var button6 : Button,
-    var button7 : Button,
-    var button8 : Button,
-    var button9 : Button,
+    button0: Button,
+    button1: Button,
+    button2: Button,
+    button3: Button,
+    button4: Button,
+    button5: Button,
+    button6: Button,
+    button7: Button,
+    button8: Button,
+    button9: Button,
+    text: TextField,
+    divide: Button,
+    plus: Button,
+    minus: Button,
+    multiply: Button,
+    clearDisplay: Button,
+    calculate: Button
+) {
+  
+  button0.onAction = handle {
+    println("button0")
+  }
 
-    var text : TextField,
-    val divide  : Button,
-    val plus : Button,
-    val minus : Button,
-    val multiply : Button,
-    val clearDisplay : Button,
-    val calculate : Button
-    
-){
-      def clearDisplay(action : ActionEvent)={
-         text.text = ""
-      }
-      
-      def button0(action: ActionEvent)= {
-        text.text = text.text.value + "0"
-      }
+  button1.onAction = handle {
+    println("button1")
+  }
 
-      def button1 (action: ActionEvent)={
-        text.text = text.text.value + "1"
-      }
+  button2.onAction = handle {
+    println("button2")
+  }
 
-      def button2(action: ActionEvent)={
-        text.text = text.text.apply + "2"
-      }
+  button3.onAction = handle {
+    println("button3")
+  }
 
-      def button3(action: ActionEvent)={
-        text.text = text.text.value + "3"
-      }
+  button4.onAction = handle {
+    println("button4")
+  }
 
-      def button4 (action: ActionEvent)={
-        text.text = text.text.value + "4"
-      }
+  button5.onAction = handle {
+    println("button5")
+  }
 
-      def button5(action: ActionEvent)={
-        text.text = text.text.value + "5"
-      }
+  button6.onAction = handle {
+    println("button6")
+  }
 
-      def button6(action: ActionEvent)={
-        text.text = text.text.value + "6"
-      }
+  button7.onAction = handle {
+    println("button7")
+  }
 
-      def button7 (action: ActionEvent)={
-        text.text = text.text.value + "7"
-      }
+  button8.onAction = handle {
+    println("button8")
+  }
 
+  button9.onAction = handle {
+    println("button9")
+  }
 
-      def button8(action: ActionEvent)={
-        text.text = text.text.value + "8"
-      }
+  divide.onAction = handle {
+    println("divide")
+  }
 
-      def button9(action: ActionEvent)={
-        text.text = text.text.value + "9"
-      }
+  plus.onAction = handle {
+    println("plus")
+  }
 
+  minus.onAction = handle {
+    println("minus")
+  }
 
-      def divide (action: ActionEvent)={
-        text.text = text.text.value + "/"
-      }
+  multiply.onAction = handle {
+    println("multiply")
+  }
 
-      def multiply(action: ActionEvent)={
-        text.text = text.text.value + "*"
-      }
+  clearDisplay.onAction = handle {
+    println("clearDisplay")
+  }
 
-      def plus (action: ActionEvent)={
-        text.text = text.text.value + "+"
-      }
+  calculate.onAction = handle {
+    println("calculate")
+  }
 
-      def minus (action: ActionEvent)={
-        text.text = text.text.value + "-"
-      }
-      
-      def calculate (action: ActionEvent) = {
-        var value = Calculator.calculate(text.text.value)
-        text.text = value
 }
